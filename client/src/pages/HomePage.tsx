@@ -210,35 +210,120 @@ const HomePage: React.FC = () => {
       </section>
 
       {/* Categories Section */}
-      <section id="programs" className="py-8 sm:py-12 md:py-20 bg-white">
+      <section id="programs" className="py-8 sm:py-12 md:py-20 bg-white overflow-hidden">
         <div className="container mx-auto px-4 sm:px-6">
           <div className="text-center mb-8 sm:mb-12 md:mb-16">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-800 mb-2 sm:mb-3 md:mb-4 animate-fade-in">What We Offer</h2>
             <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-2xl mx-auto px-4 sm:px-0">Comprehensive programs designed for your child's development</p>
           </div>
           
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
-            {categories.map((category, index) => (
-              <div
-                key={index}
-                className="bg-white rounded-lg sm:rounded-xl shadow-lg border border-gray-100 hover:shadow-xl hover:border-teal-200 transition-all duration-500 text-center group transform hover:-translate-y-2 animate-fade-in overflow-hidden"
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
-                <div className="aspect-[4/3] overflow-hidden">
-                  <img 
-                    src={category.image} 
-                    alt={category.title}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                  />
-                </div>
-                <div className="p-4 sm:p-6 md:p-8">
-                  <h3 className="text-base sm:text-lg md:text-xl font-semibold text-gray-800 mb-2 sm:mb-3 group-hover:text-teal-600 transition-colors duration-300">{category.title}</h3>
-                  <p className="text-sm sm:text-base text-gray-600 leading-relaxed">{category.description}</p>
-                </div>
+          {/* Scrolling Animation Container */}
+          <div className="relative h-[400px] sm:h-[500px] md:h-[600px] lg:h-[700px] overflow-hidden">
+            {/* First Row - Scrolling Up to Down */}
+            <div className="absolute left-0 w-1/2 pr-1 sm:pr-2 md:pr-4">
+              <div className="animate-scroll-down space-y-3 sm:space-y-4 md:space-y-6">
+                {/* Duplicate categories for continuous scroll */}
+                {[...categories.slice(0, 3), ...categories.slice(0, 3), ...categories.slice(0, 3)].map((category, index) => (
+                  <div
+                    key={`row1-${index}`}
+                    className="bg-white rounded-lg sm:rounded-xl shadow-lg border border-gray-100 hover:shadow-xl hover:border-teal-200 transition-all duration-500 text-center group transform hover:-translate-y-2 overflow-hidden hover:scale-105"
+                  >
+                    <div className="aspect-[3/2] sm:aspect-[4/3] overflow-hidden">
+                      <img 
+                        src={category.image} 
+                        alt={category.title}
+                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                      />
+                    </div>
+                    <div className="p-2 sm:p-3 md:p-4">
+                      <h3 className="text-xs sm:text-sm md:text-base font-semibold text-gray-800 mb-1 sm:mb-2 group-hover:text-teal-600 transition-colors duration-300 line-clamp-1">{category.title}</h3>
+                      <p className="text-xs sm:text-xs md:text-sm text-gray-600 leading-relaxed line-clamp-2">{category.description}</p>
+                    </div>
+                  </div>
+                ))}
               </div>
-            ))}
+            </div>
+
+            {/* Second Row - Scrolling Down to Up */}
+            <div className="absolute right-0 w-1/2 pl-1 sm:pl-2 md:pl-4">
+              <div className="animate-scroll-up space-y-3 sm:space-y-4 md:space-y-6">
+                {/* Duplicate categories for continuous scroll */}
+                {[...categories.slice(3, 6), ...categories.slice(3, 6), ...categories.slice(3, 6)].map((category, index) => (
+                  <div
+                    key={`row2-${index}`}
+                    className="bg-white rounded-lg sm:rounded-xl shadow-lg border border-gray-100 hover:shadow-xl hover:border-teal-200 transition-all duration-500 text-center group transform hover:-translate-y-2 overflow-hidden hover:scale-105"
+                  >
+                    <div className="aspect-[3/2] sm:aspect-[4/3] overflow-hidden">
+                      <img 
+                        src={category.image} 
+                        alt={category.title}
+                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                      />
+                    </div>
+                    <div className="p-2 sm:p-3 md:p-4">
+                      <h3 className="text-xs sm:text-sm md:text-base font-semibold text-gray-800 mb-1 sm:mb-2 group-hover:text-teal-600 transition-colors duration-300 line-clamp-1">{category.title}</h3>
+                      <p className="text-xs sm:text-xs md:text-sm text-gray-600 leading-relaxed line-clamp-2">{category.description}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Gradient Overlays for smooth fade effect */}
+            <div className="absolute top-0 left-0 right-0 h-12 sm:h-16 md:h-20 bg-gradient-to-b from-white to-transparent z-10 pointer-events-none"></div>
+            <div className="absolute bottom-0 left-0 right-0 h-12 sm:h-16 md:h-20 bg-gradient-to-t from-white to-transparent z-10 pointer-events-none"></div>
           </div>
         </div>
+
+        {/* Custom CSS for animations */}
+        <style>{`
+          @keyframes scroll-down {
+            0% {
+              transform: translateY(-100%);
+            }
+            100% {
+              transform: translateY(0%);
+            }
+          }
+          
+          @keyframes scroll-up {
+            0% {
+              transform: translateY(0%);
+            }
+            100% {
+              transform: translateY(-100%);
+            }
+          }
+          
+          .animate-scroll-down {
+            animation: scroll-down 25s linear infinite;
+          }
+          
+          .animate-scroll-up {
+            animation: scroll-up 25s linear infinite;
+          }
+          
+          /* Pause animation on hover for better UX */
+          .animate-scroll-down:hover,
+          .animate-scroll-up:hover {
+            animation-play-state: paused;
+          }
+
+          /* Line clamp utilities for text truncation */
+          .line-clamp-1 {
+            display: -webkit-box;
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+          }
+          
+          .line-clamp-2 {
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+          }
+        `}</style>
       </section>
 
       {/* Feature Cards Section */}
