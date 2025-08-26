@@ -13,7 +13,7 @@ const Header: React.FC<HeaderProps> = ({ onMenuClick }) => {
           {/* Left side: Menu button and Logo */}
           <div className="flex items-center space-x-3">
             {/* Menu button for sidebar - visible on all screen sizes */}
-            {/* <button 
+            <button 
               onClick={onMenuClick}
               className="p-2 rounded-full hover:bg-white/10 transition-colors duration-200"
               title="Open Menu"
@@ -21,7 +21,7 @@ const Header: React.FC<HeaderProps> = ({ onMenuClick }) => {
               <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
               </svg>
-            </button> */}
+            </button>
 
             <Link to="/" className="flex items-center space-x-3">
               <div className="w-10 h-10 bg-yellow-400 rounded-full flex items-center justify-center shadow-lg">
