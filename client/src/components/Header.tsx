@@ -41,6 +41,20 @@ const Header: React.FC<HeaderProps> = ({ onMenuClick }) => {
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-teal-600 transition-all duration-300 group-hover:w-full"></span>
             </Link>
             <Link 
+              to="/about" 
+              className="text-gray-700 hover:text-teal-600 font-medium transition-colors duration-300 relative group"
+            >
+              About
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-teal-600 transition-all duration-300 group-hover:w-full"></span>
+            </Link>
+            <Link 
+              to="/contact" 
+              className="text-gray-700 hover:text-teal-600 font-medium transition-colors duration-300 relative group"
+            >
+              Contact
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-teal-600 transition-all duration-300 group-hover:w-full"></span>
+            </Link>
+            <Link 
               to="/admission" 
               className="text-gray-700 hover:text-teal-600 font-medium transition-colors duration-300 relative group"
             >

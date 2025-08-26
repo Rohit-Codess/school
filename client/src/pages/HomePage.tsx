@@ -107,13 +107,13 @@ const HomePage: React.FC = () => {
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start px-4 sm:px-0">
                 <Link
                   to="/admission"
-                  className="inline-flex items-center justify-center bg-teal-600 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-xl text-base sm:text-lg font-semibold hover:bg-teal-700 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl"
+                  className="inline-flex items-center justify-center bg-teal-600 text-white px-4 sm:px-8 py-2.5 sm:py-4 rounded-lg sm:rounded-xl text-sm sm:text-lg font-semibold hover:bg-teal-700 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl"
                 >
                   Start Admission
                 </Link>
                 <Link
                   to="/about"
-                  className="inline-flex items-center justify-center border-2 border-teal-600 text-teal-600 px-6 sm:px-8 py-3 sm:py-4 rounded-xl text-base sm:text-lg font-semibold hover:bg-teal-50 transition-all duration-300"
+                  className="inline-flex items-center justify-center border-2 border-teal-600 text-teal-600 px-4 sm:px-8 py-2.5 sm:py-4 rounded-lg sm:rounded-xl text-sm sm:text-lg font-semibold hover:bg-teal-50 transition-all duration-300"
                 >
                   Learn More
                 </Link>
