@@ -347,7 +347,7 @@ const HomePage: React.FC = () => {
               transform: translateX(0%);
             }
             100% {
-              transform: translateX(-50%);
+              transform: translateX(-350%);
             }
           }
           
@@ -360,7 +360,7 @@ const HomePage: React.FC = () => {
           }
           
           .animate-scroll-horizontal {
-            animation: scroll-horizontal 30s linear infinite;
+            animation: scroll-horizontal 10s linear infinite;
           }
           
           /* Pause animation on hover for better UX */
