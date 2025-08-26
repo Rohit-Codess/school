@@ -1,0 +1,21 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://kidsschool.com/sitemap.xml
+
+# Crawl-delay for polite crawling
+Crawl-delay: 1
+
+# Allow all content for search engines
+Allow: /admission
+Allow: /admin
+Allow: /about
+Allow: /programs
+Allow: /contact
+
+# Block any sensitive areas (if any)
+# Disallow: /private/
+
+# Cache directives
+# Cache: public, max-age=3600

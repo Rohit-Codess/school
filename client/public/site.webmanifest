@@ -1,0 +1,25 @@
+{
+  "name": "Kids School - Quality Education with Care and Innovation",
+  "short_name": "Kids School",
+  "description": "Providing exceptional early childhood education with experienced teachers, modern facilities, and holistic development programs.",
+  "icons": [
+    {
+      "src": "/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#0d9488",
+  "background_color": "#ffffff",
+  "display": "standalone",
+  "orientation": "portrait",
+  "start_url": "/",
+  "scope": "/",
+  "categories": ["education", "kids", "school"],
+  "lang": "en-US"
+}
