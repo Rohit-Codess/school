@@ -771,6 +771,9 @@ const HomePage: React.FC = () => {
                   <div className="w-6 h-6 sm:w-8 sm:h-8 bg-purple-100 rounded-full flex items-center justify-center group-hover:bg-purple-200 transition-colors duration-300 flex-shrink-0 ml-2">
                     <span className="text-purple-600 text-lg sm:text-xl transform transition-transform duration-300 group-hover:rotate-180">+</span>
                   </div>
+                  <div className="w-8 h-8 bg-purple-100 rounded-full flex items-center justify-center group-hover:bg-purple-200 transition-colors duration-300">
+                    <span className="text-purple-600 text-xl transform transition-transform duration-300 group-hover:rotate-180">+</span>
+                  </div>
                 </summary>
                 <div className="px-6 md:px-8 pb-6 md:pb-8">
                   <div className="bg-gradient-to-r from-orange-50 to-red-50 rounded-xl p-6 border-l-4 border-orange-400">
