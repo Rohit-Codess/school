@@ -140,29 +140,29 @@ const AboutPage: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-gradient-to-br from-purple-600 via-purple-700 to-pink-600">
       {/* Hero Section */}
-      <section className="relative py-16 md:py-24 bg-gradient-to-br from-teal-50 via-white to-teal-50 overflow-hidden">
-        <div className="absolute top-20 left-10 w-32 h-32 bg-teal-100 rounded-full opacity-20 blur-3xl"></div>
-        <div className="absolute bottom-20 right-10 w-40 h-40 bg-teal-200 rounded-full opacity-15 blur-3xl"></div>
+      <section className="relative py-16 md:py-24 bg-gradient-to-br from-purple-600 via-purple-700 to-pink-600 overflow-hidden">
+        <div className="absolute top-20 left-10 w-32 h-32 bg-yellow-400 rounded-full opacity-20 blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-20 right-10 w-40 h-40 bg-pink-400 rounded-full opacity-15 blur-3xl animate-bounce"></div>
         
         <div className="container mx-auto px-4 md:px-6 relative z-10">
           <div className={`text-center transition-all duration-1000 transform ${
             isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
           }`}>
-            <div className="inline-flex items-center px-4 py-2 bg-teal-100 text-teal-700 rounded-full text-sm font-semibold mb-6">
+            <div className="inline-flex items-center px-4 py-2 bg-yellow-400 text-purple-800 rounded-full text-sm font-semibold mb-6">
               📚 About Kids School
             </div>
             
-            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
               Our Story of 
-              <span className="text-teal-600 relative block md:inline">
+              <span className="text-yellow-400 relative block md:inline">
                 Educational Excellence
-                <div className="absolute -bottom-2 left-0 w-full h-3 bg-teal-200 opacity-30 rounded-lg"></div>
+                <div className="absolute -bottom-2 left-0 w-full h-3 bg-yellow-400 opacity-30 rounded-lg"></div>
               </span>
             </h1>
             
-            <p className="text-lg md:text-xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-lg md:text-xl text-white/90 mb-8 max-w-3xl mx-auto leading-relaxed">
               For over two decades, Kids School has been nurturing young minds and shaping the future 
               leaders of tomorrow through innovative education and holistic development.
             </p>
@@ -170,13 +170,13 @@ const AboutPage: React.FC = () => {
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
               <Link
                 to="/admission"
-                className="inline-flex items-center justify-center bg-teal-600 text-white px-4 sm:px-8 py-2.5 sm:py-4 rounded-lg sm:rounded-xl text-sm sm:text-lg font-semibold hover:bg-teal-700 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl"
+                className="inline-flex items-center justify-center bg-yellow-400 text-purple-800 px-4 sm:px-8 py-2.5 sm:py-4 rounded-full text-sm sm:text-lg font-bold hover:bg-yellow-300 hover:shadow-xl transform hover:scale-105 transition-all duration-300 shadow-lg"
               >
                 Join Our School
               </Link>
               <Link
                 to="/contact"
-                className="inline-flex items-center justify-center border-2 border-teal-600 text-teal-600 px-4 sm:px-8 py-2.5 sm:py-4 rounded-lg sm:rounded-xl text-sm sm:text-lg font-semibold hover:bg-teal-50 transition-all duration-300"
+                className="inline-flex items-center justify-center border-2 border-white text-white px-4 sm:px-8 py-2.5 sm:py-4 rounded-full text-sm sm:text-lg font-bold hover:bg-white hover:text-purple-700 transition-all duration-300"
               >
                 Contact Us
               </Link>
@@ -186,16 +186,16 @@ const AboutPage: React.FC = () => {
       </section>
 
       {/* Navigation Tabs */}
-      <section className="py-8 bg-white border-b border-gray-200">
+      <section className="py-8 bg-gradient-to-r from-purple-50 to-pink-50 border-b border-purple-100">
         <div className="container mx-auto px-4 md:px-6">
           <div className="flex justify-center">
-            <div className="bg-gray-100 rounded-lg p-1 inline-flex">
+            <div className="bg-purple-100/50 backdrop-blur-sm rounded-lg p-1 inline-flex border border-purple-200">
               <button
                 onClick={() => setActiveTab('history')}
                 className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
                   activeTab === 'history'
-                    ? 'bg-teal-600 text-white shadow-lg'
-                    : 'text-gray-600 hover:text-gray-900'
+                    ? 'bg-purple-600 text-white shadow-lg'
+                    : 'text-purple-600 hover:text-purple-800 hover:bg-purple-50'
                 }`}
               >
                 Our History
@@ -204,8 +204,8 @@ const AboutPage: React.FC = () => {
                 onClick={() => setActiveTab('reviews')}
                 className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
                   activeTab === 'reviews'
-                    ? 'bg-teal-600 text-white shadow-lg'
-                    : 'text-gray-600 hover:text-gray-900'
+                    ? 'bg-purple-600 text-white shadow-lg'
+                    : 'text-purple-600 hover:text-purple-800 hover:bg-purple-50'
                 }`}
               >
                 Parent Reviews
@@ -219,11 +219,11 @@ const AboutPage: React.FC = () => {
       {activeTab === 'history' && (
         <>
           {/* History Timeline */}
-          <section className="py-16 md:py-20 bg-white">
+          <section className="py-16 md:py-20 bg-gradient-to-br from-purple-50 to-pink-50">
             <div className="container mx-auto px-4 md:px-6">
               <div className="text-center mb-16">
-                <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Our Journey Through Time</h2>
-                <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+                <h2 className="text-3xl md:text-4xl font-bold text-purple-800 mb-4">Our Journey Through Time</h2>
+                <p className="text-lg text-purple-700 max-w-2xl mx-auto">
                   From humble beginnings to becoming a leading educational institution, 
                   here's how Kids School has evolved over the years.
                 </p>
@@ -231,7 +231,7 @@ const AboutPage: React.FC = () => {
 
               <div className="relative">
                 {/* Timeline Line */}
-                <div className="absolute left-1/2 transform -translate-x-1/2 w-1 bg-teal-200 h-full hidden md:block"></div>
+                <div className="absolute left-1/2 transform -translate-x-1/2 w-1 bg-purple-300 h-full hidden md:block"></div>
 
                 <div className="space-y-12 md:space-y-16">
                   {milestones.map((milestone, index) => (
@@ -243,21 +243,21 @@ const AboutPage: React.FC = () => {
                     >
                       {/* Content */}
                       <div className={`w-full md:w-5/12 ${index % 2 === 0 ? 'md:text-right' : 'md:text-left'}`}>
-                        <div className="bg-white rounded-2xl shadow-lg p-8 border border-gray-100 hover:shadow-xl transition-shadow duration-300">
+                        <div className="bg-white rounded-2xl shadow-lg p-8 border-2 border-purple-100 hover:shadow-xl hover:border-purple-200 transition-all duration-300">
                           <div className={`flex items-center gap-3 mb-4 ${index % 2 === 0 ? 'md:justify-end' : 'md:justify-start'} justify-center`}>
                             <span className="text-3xl">{milestone.icon}</span>
-                            <h3 className="text-2xl font-bold text-gray-800">{milestone.title}</h3>
+                            <h3 className="text-2xl font-bold text-purple-800">{milestone.title}</h3>
                           </div>
-                          <p className="text-gray-600 leading-relaxed">{milestone.description}</p>
+                          <p className="text-purple-700 leading-relaxed">{milestone.description}</p>
                         </div>
                       </div>
 
                       {/* Timeline Node */}
                       <div className="relative">
-                        <div className="w-16 h-16 bg-teal-600 rounded-full flex items-center justify-center text-white font-bold text-lg shadow-lg">
+                        <div className="w-16 h-16 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full flex items-center justify-center text-white font-bold text-lg shadow-lg">
                           {milestone.year.slice(-2)}
                         </div>
-                        <div className="absolute -top-2 -left-2 w-20 h-20 bg-teal-200 rounded-full opacity-30 animate-ping"></div>
+                        <div className="absolute -top-2 -left-2 w-20 h-20 bg-purple-300 rounded-full opacity-30 animate-ping"></div>
                       </div>
 
                       {/* Spacer for alternating layout */}
@@ -270,22 +270,22 @@ const AboutPage: React.FC = () => {
           </section>
 
           {/* Achievements Section */}
-          <section className="py-16 md:py-20 bg-gray-50">
+          <section className="py-16 md:py-20 bg-gradient-to-br from-yellow-400 via-orange-400 to-pink-400">
             <div className="container mx-auto px-4 md:px-6">
               <div className="text-center mb-16">
-                <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Our Achievements</h2>
-                <p className="text-lg text-gray-600">Milestones that showcase our commitment to excellence</p>
+                <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Our Achievements</h2>
+                <p className="text-lg text-white/90">Milestones that showcase our commitment to excellence</p>
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                 {achievements.map((achievement, index) => (
                   <div
                     key={index}
-                    className="bg-white rounded-2xl p-8 text-center shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"
+                    className="bg-white/95 backdrop-blur-sm rounded-2xl p-8 text-center shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border-2 border-white/50"
                   >
                     <div className="text-4xl mb-4">{achievement.icon}</div>
-                    <h3 className="text-xl font-bold text-gray-800 mb-3">{achievement.title}</h3>
-                    <p className="text-gray-600">{achievement.description}</p>
+                    <h3 className="text-xl font-bold text-purple-800 mb-3">{achievement.title}</h3>
+                    <p className="text-purple-700">{achievement.description}</p>
                   </div>
                 ))}
               </div>
@@ -297,11 +297,11 @@ const AboutPage: React.FC = () => {
       {activeTab === 'reviews' && (
         <>
           {/* Reviews Section */}
-          <section className="py-16 md:py-20 bg-white">
+          <section className="py-16 md:py-20 bg-gradient-to-br from-purple-50 to-pink-50">
             <div className="container mx-auto px-4 md:px-6">
               <div className="text-center mb-16">
-                <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">What Parents Say</h2>
-                <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+                <h2 className="text-3xl md:text-4xl font-bold text-purple-800 mb-4">What Parents Say</h2>
+                <p className="text-lg text-purple-700 max-w-2xl mx-auto">
                   Hear from our parent community about their experience with Kids School. 
                   Their trust and satisfaction is our greatest achievement.
                 </p>
@@ -311,23 +311,23 @@ const AboutPage: React.FC = () => {
                 {reviews.map((review, index) => (
                   <div
                     key={review.id}
-                    className="bg-white rounded-2xl shadow-lg border border-gray-100 p-8 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"
+                    className="bg-white rounded-2xl shadow-lg border-2 border-purple-100 p-8 hover:shadow-xl hover:border-purple-200 transition-all duration-300 transform hover:-translate-y-2"
                     style={{ animationDelay: `${index * 0.1}s` }}
                   >
                     {/* Rating */}
                     <div className="flex items-center gap-2 mb-4">
                       {renderStars(review.rating)}
-                      <span className="text-sm text-gray-500 ml-2">{review.date}</span>
+                      <span className="text-sm text-purple-500 ml-2">{review.date}</span>
                     </div>
 
                     {/* Review Text */}
-                    <p className="text-gray-600 mb-6 leading-relaxed italic">
+                    <p className="text-purple-700 mb-6 leading-relaxed italic">
                       "{review.comment}"
                     </p>
 
                     {/* Reviewer Info */}
-                    <div className="flex items-center gap-4 pt-4 border-t border-gray-100">
-                      <div className="w-12 h-12 rounded-full overflow-hidden bg-gray-200">
+                    <div className="flex items-center gap-4 pt-4 border-t border-purple-100">
+                      <div className="w-12 h-12 rounded-full overflow-hidden bg-purple-100">
                         <img
                           src={review.image}
                           alt={review.name}
@@ -335,8 +335,8 @@ const AboutPage: React.FC = () => {
                         />
                       </div>
                       <div>
-                        <h4 className="font-semibold text-gray-900">{review.name}</h4>
-                        <p className="text-sm text-gray-600">{review.role}</p>
+                        <h4 className="font-semibold text-purple-800">{review.name}</h4>
+                        <p className="text-sm text-purple-600">{review.role}</p>
                       </div>
                     </div>
                   </div>
@@ -345,40 +345,40 @@ const AboutPage: React.FC = () => {
 
               {/* Overall Rating */}
               <div className="mt-16 text-center">
-                <div className="bg-teal-50 rounded-2xl p-8 inline-block">
+                <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 inline-block border-2 border-purple-200 shadow-xl">
                   <div className="flex items-center justify-center gap-4 mb-4">
-                    <span className="text-4xl font-bold text-teal-600">4.9</span>
+                    <span className="text-4xl font-bold text-purple-600">4.9</span>
                     <div>
                       <div className="flex items-center gap-1">
                         {renderStars(5)}
                       </div>
-                      <p className="text-sm text-gray-600 mt-1">Based on 150+ reviews</p>
+                      <p className="text-sm text-purple-600 mt-1">Based on 150+ reviews</p>
                     </div>
                   </div>
-                  <p className="text-gray-700 font-semibold">Excellent Rating from Our Parent Community</p>
+                  <p className="text-purple-700 font-semibold">Excellent Rating from Our Parent Community</p>
                 </div>
               </div>
             </div>
           </section>
 
           {/* Call to Action */}
-          <section className="py-16 md:py-20 bg-gray-50">
+          <section className="py-16 md:py-20 bg-gradient-to-br from-purple-600 via-purple-700 to-pink-600">
             <div className="container mx-auto px-4 md:px-6">
-              <div className="bg-teal-600 rounded-3xl p-12 text-center text-white">
-                <h2 className="text-3xl md:text-4xl font-bold mb-4">Join Our Growing Family</h2>
-                <p className="text-xl mb-8 opacity-90">
+              <div className="bg-white/95 backdrop-blur-sm rounded-3xl p-12 text-center shadow-xl border-2 border-white/50">
+                <h2 className="text-3xl md:text-4xl font-bold text-purple-800 mb-4">Join Our Growing Family</h2>
+                <p className="text-xl text-purple-700 mb-8 opacity-90">
                   Experience the difference that quality education and caring teachers can make in your child's life.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
                   <Link
                     to="/admission"
-                    className="inline-flex items-center justify-center bg-white text-teal-600 px-4 sm:px-8 py-2.5 sm:py-4 rounded-lg sm:rounded-xl text-sm sm:text-lg font-semibold hover:bg-gray-100 transform hover:scale-105 transition-all duration-300 shadow-lg"
+                    className="inline-flex items-center justify-center bg-gradient-to-r from-purple-600 to-pink-600 text-white px-4 sm:px-8 py-2.5 sm:py-4 rounded-full text-sm sm:text-lg font-bold hover:from-purple-700 hover:to-pink-700 transform hover:scale-105 transition-all duration-300 shadow-lg"
                   >
                     Start Admission Process
                   </Link>
                   <Link
                     to="/contact"
-                    className="inline-flex items-center justify-center border-2 border-white text-white px-4 sm:px-8 py-2.5 sm:py-4 rounded-lg sm:rounded-xl text-sm sm:text-lg font-semibold hover:bg-white hover:text-teal-600 transition-all duration-300"
+                    className="inline-flex items-center justify-center border-2 border-purple-600 text-purple-600 px-4 sm:px-8 py-2.5 sm:py-4 rounded-full text-sm sm:text-lg font-bold hover:bg-purple-50 transition-all duration-300"
                   >
                     Schedule a Visit
                   </Link>

@@ -69,27 +69,27 @@ const ContactPage: React.FC = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-gradient-to-br from-purple-600 via-purple-700 to-pink-600">
       {/* Hero Section */}
-      <section className="relative py-12 md:py-20 bg-gradient-to-br from-teal-50 via-white to-teal-50 overflow-hidden">
-        <div className="absolute top-20 left-10 w-32 h-32 bg-teal-100 rounded-full opacity-20 blur-3xl"></div>
-        <div className="absolute bottom-20 right-10 w-40 h-40 bg-teal-200 rounded-full opacity-15 blur-3xl"></div>
+      <section className="relative py-12 md:py-20 bg-gradient-to-br from-purple-600 via-purple-700 to-pink-600 overflow-hidden">
+        <div className="absolute top-20 left-10 w-32 h-32 bg-yellow-400 rounded-full opacity-20 blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-20 right-10 w-40 h-40 bg-pink-400 rounded-full opacity-15 blur-3xl animate-bounce"></div>
         
         <div className="container mx-auto px-4 md:px-6 relative z-10">
           <div className="text-center">
-            <div className="inline-flex items-center px-3 sm:px-4 py-2 bg-teal-100 text-teal-700 rounded-full text-xs sm:text-sm font-semibold mb-4 sm:mb-6">
+            <div className="inline-flex items-center px-3 sm:px-4 py-2 bg-yellow-400 text-purple-800 rounded-full text-xs sm:text-sm font-bold mb-4 sm:mb-6">
               📞 Get In Touch
             </div>
             
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-4 sm:mb-6 leading-tight">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 sm:mb-6 leading-tight">
               Contact 
-              <span className="text-teal-600 relative block sm:inline">
+              <span className="text-yellow-400 relative block sm:inline">
                 Kids School
-                <div className="absolute -bottom-1 sm:-bottom-2 left-0 w-full h-2 sm:h-3 bg-teal-200 opacity-30 rounded-lg"></div>
+                <div className="absolute -bottom-1 sm:-bottom-2 left-0 w-full h-2 sm:h-3 bg-yellow-400 opacity-30 rounded-lg"></div>
               </span>
             </h1>
             
-            <p className="text-base sm:text-lg md:text-xl text-gray-600 mb-6 sm:mb-8 max-w-3xl mx-auto leading-relaxed px-4 sm:px-0">
+            <p className="text-base sm:text-lg md:text-xl text-white/90 mb-6 sm:mb-8 max-w-3xl mx-auto leading-relaxed px-4 sm:px-0">
               We're here to help! Reach out to us for admissions, inquiries, or any questions about our programs. 
               Our dedicated team is ready to assist you.
             </p>
@@ -97,13 +97,13 @@ const ContactPage: React.FC = () => {
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
               <Link
                 to="/admission"
-                className="inline-flex items-center justify-center bg-teal-600 text-white px-4 sm:px-8 py-2.5 sm:py-4 rounded-lg sm:rounded-xl text-sm sm:text-lg font-semibold hover:bg-teal-700 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl"
+                className="inline-flex items-center justify-center bg-yellow-400 text-purple-800 px-4 sm:px-8 py-2.5 sm:py-4 rounded-full text-sm sm:text-lg font-bold hover:bg-yellow-300 hover:shadow-xl transform hover:scale-105 transition-all duration-300 shadow-lg"
               >
                 Start Admission
               </Link>
               <a
                 href="#contact-form"
-                className="inline-flex items-center justify-center border-2 border-teal-600 text-teal-600 px-4 sm:px-8 py-2.5 sm:py-4 rounded-lg sm:rounded-xl text-sm sm:text-lg font-semibold hover:bg-teal-50 transition-all duration-300"
+                className="inline-flex items-center justify-center border-2 border-white text-white px-4 sm:px-8 py-2.5 sm:py-4 rounded-full text-sm sm:text-lg font-bold hover:bg-white hover:text-purple-700 transition-all duration-300"
               >
                 Send Message
               </a>
@@ -113,11 +113,11 @@ const ContactPage: React.FC = () => {
       </section>
 
       {/* Contact Information Cards */}
-      <section className="py-12 md:py-20 bg-white">
+      <section className="py-12 md:py-20 bg-gradient-to-br from-purple-50 to-pink-50">
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center mb-12 md:mb-16">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-800 mb-4">How to Reach Us</h2>
-            <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-purple-800 mb-4">How to Reach Us</h2>
+            <p className="text-base sm:text-lg text-purple-700 max-w-2xl mx-auto">
               Multiple ways to connect with us. Choose what works best for you.
             </p>
           </div>
@@ -126,15 +126,15 @@ const ContactPage: React.FC = () => {
             {contactInfo.map((info, index) => (
               <div
                 key={index}
-                className="bg-white rounded-2xl shadow-lg border border-gray-100 p-6 md:p-8 text-center hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"
+                className="bg-white rounded-2xl shadow-lg border-2 border-purple-100 p-6 md:p-8 text-center hover:shadow-xl hover:border-purple-200 transition-all duration-300 transform hover:-translate-y-2"
               >
                 <div className={`w-16 h-16 ${info.color} rounded-full flex items-center justify-center mx-auto mb-4 text-2xl`}>
                   {info.icon}
                 </div>
-                <h3 className="text-lg md:text-xl font-bold text-gray-800 mb-4">{info.title}</h3>
+                <h3 className="text-lg md:text-xl font-bold text-purple-800 mb-4">{info.title}</h3>
                 <div className="space-y-2">
                   {info.details.map((detail, idx) => (
-                    <p key={idx} className="text-sm md:text-base text-gray-600">{detail}</p>
+                    <p key={idx} className="text-sm md:text-base text-purple-700">{detail}</p>
                   ))}
                 </div>
               </div>
@@ -144,17 +144,17 @@ const ContactPage: React.FC = () => {
       </section>
 
       {/* Contact Form and Map */}
-      <section id="contact-form" className="py-12 md:py-20 bg-gray-50">
+      <section id="contact-form" className="py-12 md:py-20 bg-gradient-to-br from-yellow-400 via-orange-400 to-pink-400">
         <div className="container mx-auto px-4 md:px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
             {/* Contact Form */}
-            <div className="bg-white rounded-2xl shadow-lg p-6 md:p-8">
-              <h3 className="text-2xl md:text-3xl font-bold text-gray-800 mb-6">Send Us a Message</h3>
+            <div className="bg-white/95 backdrop-blur-sm rounded-2xl shadow-lg p-6 md:p-8 border-2 border-white/50">
+              <h3 className="text-2xl md:text-3xl font-bold text-purple-800 mb-6">Send Us a Message</h3>
               
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
-                    <label htmlFor="name" className="block text-sm font-semibold text-gray-700 mb-2">
+                    <label htmlFor="name" className="block text-sm font-semibold text-purple-700 mb-2">
                       Full Name *
                     </label>
                     <input
@@ -164,12 +164,12 @@ const ContactPage: React.FC = () => {
                       value={formData.name}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500 transition-colors duration-300"
+                      className="w-full px-4 py-3 border border-purple-200 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition-colors duration-300"
                       placeholder="Enter your full name"
                     />
                   </div>
                   <div>
-                    <label htmlFor="email" className="block text-sm font-semibold text-gray-700 mb-2">
+                    <label htmlFor="email" className="block text-sm font-semibold text-purple-700 mb-2">
                       Email Address *
                     </label>
                     <input
@@ -179,7 +179,7 @@ const ContactPage: React.FC = () => {
                       value={formData.email}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500 transition-colors duration-300"
+                      className="w-full px-4 py-3 border border-purple-200 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition-colors duration-300"
                       placeholder="Enter your email"
                     />
                   </div>
@@ -187,7 +187,7 @@ const ContactPage: React.FC = () => {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
-                    <label htmlFor="phone" className="block text-sm font-semibold text-gray-700 mb-2">
+                    <label htmlFor="phone" className="block text-sm font-semibold text-purple-700 mb-2">
                       Phone Number
                     </label>
                     <input
@@ -196,12 +196,12 @@ const ContactPage: React.FC = () => {
                       name="phone"
                       value={formData.phone}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500 transition-colors duration-300"
+                      className="w-full px-4 py-3 border border-purple-200 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition-colors duration-300"
                       placeholder="Enter your phone number"
                     />
                   </div>
                   <div>
-                    <label htmlFor="inquiryType" className="block text-sm font-semibold text-gray-700 mb-2">
+                    <label htmlFor="inquiryType" className="block text-sm font-semibold text-purple-700 mb-2">
                       Inquiry Type
                     </label>
                     <select
@@ -209,7 +209,7 @@ const ContactPage: React.FC = () => {
                       name="inquiryType"
                       value={formData.inquiryType}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500 transition-colors duration-300"
+                      className="w-full px-4 py-3 border border-purple-200 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition-colors duration-300"
                     >
                       <option value="general">General Inquiry</option>
                       <option value="admission">Admission</option>
@@ -222,7 +222,7 @@ const ContactPage: React.FC = () => {
                 </div>
 
                 <div>
-                  <label htmlFor="subject" className="block text-sm font-semibold text-gray-700 mb-2">
+                  <label htmlFor="subject" className="block text-sm font-semibold text-purple-700 mb-2">
                     Subject *
                   </label>
                   <input
@@ -232,13 +232,13 @@ const ContactPage: React.FC = () => {
                     value={formData.subject}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500 transition-colors duration-300"
+                    className="w-full px-4 py-3 border border-purple-200 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition-colors duration-300"
                     placeholder="Enter message subject"
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="message" className="block text-sm font-semibold text-gray-700 mb-2">
+                  <label htmlFor="message" className="block text-sm font-semibold text-purple-700 mb-2">
                     Message *
                   </label>
                   <textarea
@@ -248,14 +248,14 @@ const ContactPage: React.FC = () => {
                     onChange={handleChange}
                     required
                     rows={5}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500 transition-colors duration-300 resize-vertical"
+                    className="w-full px-4 py-3 border border-purple-200 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition-colors duration-300 resize-vertical"
                     placeholder="Enter your message here..."
                   ></textarea>
                 </div>
 
                 <button
                   type="submit"
-                  className="w-full bg-teal-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-teal-700 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl"
+                  className="w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white py-3 px-6 rounded-lg font-bold hover:from-purple-700 hover:to-pink-700 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl"
                 >
                   Send Message
                 </button>
@@ -265,10 +265,10 @@ const ContactPage: React.FC = () => {
             {/* Map and Additional Info */}
             <div className="space-y-8">
               {/* Map */}
-              <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
-                <div className="p-6 border-b border-gray-200">
-                  <h3 className="text-xl font-bold text-gray-800">Our Location</h3>
-                  <p className="text-gray-600 mt-2">Find us near Ranchi University</p>
+              <div className="bg-white/95 backdrop-blur-sm rounded-2xl shadow-lg overflow-hidden border-2 border-white/50">
+                <div className="p-6 border-b border-purple-200">
+                  <h3 className="text-xl font-bold text-purple-800">Our Location</h3>
+                  <p className="text-purple-700 mt-2">Find us near Ranchi University</p>
                 </div>
                 <div className="relative h-64 md:h-80">
                   <iframe
@@ -287,7 +287,7 @@ const ContactPage: React.FC = () => {
                     href={`https://www.google.com/maps/dir/?api=1&destination=23.348484,85.2930595`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 text-teal-600 hover:text-teal-700 font-semibold"
+                    className="inline-flex items-center gap-2 text-purple-600 hover:text-purple-700 font-semibold"
                   >
                     <span>🗺️</span>
                     Get Directions
@@ -296,18 +296,18 @@ const ContactPage: React.FC = () => {
               </div>
 
               {/* Department Contacts */}
-              <div className="bg-white rounded-2xl shadow-lg p-6">
-                <h3 className="text-xl font-bold text-gray-800 mb-6">Department Contacts</h3>
+              <div className="bg-white/95 backdrop-blur-sm rounded-2xl shadow-lg p-6 border-2 border-white/50">
+                <h3 className="text-xl font-bold text-purple-800 mb-6">Department Contacts</h3>
                 <div className="space-y-4">
                   {departments.map((dept, index) => (
-                    <div key={index} className="flex justify-between items-center p-4 bg-gray-50 rounded-lg">
+                    <div key={index} className="flex justify-between items-center p-4 bg-purple-50 rounded-lg border border-purple-100">
                       <div>
-                        <h4 className="font-semibold text-gray-800">{dept.name}</h4>
-                        <p className="text-sm text-gray-600">{dept.phone}</p>
+                        <h4 className="font-semibold text-purple-800">{dept.name}</h4>
+                        <p className="text-sm text-purple-600">{dept.phone}</p>
                       </div>
                       <a
                         href={`mailto:${dept.email}`}
-                        className="text-teal-600 hover:text-teal-700 font-medium text-sm"
+                        className="text-purple-600 hover:text-purple-700 font-medium text-sm"
                       >
                         Email
                       </a>
@@ -321,11 +321,11 @@ const ContactPage: React.FC = () => {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-12 md:py-20 bg-white">
+      <section className="py-12 md:py-20 bg-gradient-to-br from-purple-50 to-pink-50">
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center mb-12">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-800 mb-4">Frequently Asked Questions</h2>
-            <p className="text-base sm:text-lg text-gray-600">Quick answers to common questions</p>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-purple-800 mb-4">Frequently Asked Questions</h2>
+            <p className="text-base sm:text-lg text-purple-700">Quick answers to common questions</p>
           </div>
 
           <div className="max-w-4xl mx-auto space-y-6">
@@ -351,9 +351,9 @@ const ContactPage: React.FC = () => {
                 answer: "Yes! We offer various activities including sports, arts, music, dance, science clubs, and more to support holistic development."
               }
             ].map((faq, index) => (
-              <div key={index} className="bg-gray-50 rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-gray-800 mb-3">{faq.question}</h3>
-                <p className="text-gray-600 leading-relaxed">{faq.answer}</p>
+              <div key={index} className="bg-white/80 backdrop-blur-sm rounded-lg p-6 border-2 border-purple-100 hover:border-purple-200 transition-all duration-300">
+                <h3 className="text-lg font-semibold text-purple-800 mb-3">{faq.question}</h3>
+                <p className="text-purple-700 leading-relaxed">{faq.answer}</p>
               </div>
             ))}
           </div>

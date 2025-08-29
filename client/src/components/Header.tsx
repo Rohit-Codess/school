@@ -41,25 +41,25 @@ const Header: React.FC<HeaderProps> = ({ onMenuClick }) => {
                 Home
               </Link>
               <Link 
-                to="#" 
+                to="/about" 
                 className="text-white hover:text-yellow-400 font-medium transition-colors duration-300 relative group px-4 py-2 rounded-full hover:bg-yellow-400/20"
               >
                 About Us
               </Link>
               <Link 
-                to="#" 
+                to="/about" 
                 className="text-white hover:text-yellow-400 font-medium transition-colors duration-300 relative group px-4 py-2 rounded-full hover:bg-yellow-400/20"
               >
                 Programmes
               </Link>
               <Link 
-                to="#" 
+                to="/admission" 
                 className="text-white hover:text-yellow-400 font-medium transition-colors duration-300 relative group px-4 py-2 rounded-full hover:bg-yellow-400/20"
               >
                 Admissions
               </Link>
               <Link 
-                to="#" 
+                to="/contact" 
                 className="text-white hover:text-yellow-400 font-medium transition-colors duration-300 relative group px-4 py-2 rounded-full hover:bg-yellow-400/20"
               >
                 Locate Us

@@ -21,8 +21,8 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
       )
     },
     { 
-      path: '#', 
-      label: 'About', 
+      path: '/about', 
+      label: 'About Us', 
       icon: (
         <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -30,7 +30,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
       )
     },
     { 
-      path: '#', 
+      path: '/contact', 
       label: 'Contact', 
       icon: (
         <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -39,8 +39,8 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
       )
     },
     { 
-      path: '#', 
-      label: 'Admission', 
+      path: '/admission', 
+      label: 'Admissions', 
       icon: (
         <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
@@ -48,7 +48,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
       )
     },
     { 
-      path: '#', 
+      path: '/admin', 
       label: 'Admin', 
       icon: (
         <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -137,35 +137,35 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
       {/* Overlay */}
       {isOpen && (
         <div
-          className="fixed inset-0 bg-black bg-opacity-50 z-40"
+          className="fixed inset-0 bg-purple-900/50 backdrop-blur-sm z-40"
           onClick={onClose}
         />
       )}
 
       {/* Sidebar */}
       <div
-        className={`fixed top-0 left-0 h-full w-80 bg-white shadow-xl z-50 transform transition-transform duration-300 ease-in-out ${
+        className={`fixed top-0 left-0 h-full w-80 bg-gradient-to-b from-purple-50 to-pink-50 shadow-xl z-50 transform transition-transform duration-300 ease-in-out ${
           isOpen ? 'translate-x-0' : '-translate-x-full'
         }`}
       >
         <div className="flex flex-col h-full">
           {/* Header */}
-          <div className="p-6 border-b border-gray-200 bg-gradient-to-r from-teal-50 to-blue-50">
+          <div className="p-6 border-b border-purple-100 bg-gradient-to-r from-purple-600 via-purple-700 to-pink-600">
             <div className="flex items-center justify-between">
               <div className="flex items-center">
-                <div className="w-10 h-10 bg-teal-600 rounded-lg flex items-center justify-center text-white font-bold mr-3">
-                  K
+                <div className="w-10 h-10 bg-yellow-400 rounded-lg flex items-center justify-center text-purple-800 font-bold mr-3">
+                  KS
                 </div>
                 <div>
-                  <h2 className="text-lg font-bold text-gray-800">Kids School</h2>
-                  <p className="text-sm text-gray-600">Excellence in Education</p>
+                  <h2 className="text-lg font-bold text-white">Kids School</h2>
+                  <p className="text-sm text-purple-100">Excellence in Education</p>
                 </div>
               </div>
               <button
                 onClick={onClose}
-                className="lg:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors duration-200"
+                className="lg:hidden p-2 rounded-lg hover:bg-white/10 transition-colors duration-200"
               >
-                <span className="text-xl">✕</span>
+                <span className="text-xl text-white">✕</span>
               </button>
             </div>
           </div>
@@ -174,7 +174,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
           <div className="flex-1 overflow-y-auto p-6">
             {/* Main Navigation */}
             <div className="mb-8">
-              <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-4">
+              <h3 className="text-sm font-semibold text-purple-600 uppercase tracking-wider mb-4">
                 Navigation
               </h3>
               <nav className="space-y-2">
@@ -183,9 +183,9 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                     key={item.path}
                     to={item.path}
                     onClick={() => handleLinkClick(item.path)}
-                    className={`flex items-center p-3 rounded-lg transition-all duration-200 hover:bg-teal-50 hover:text-teal-700 group ${
+                    className={`flex items-center p-3 rounded-lg transition-all duration-200 hover:bg-purple-100 hover:text-purple-700 group ${
                       location.pathname === item.path
-                        ? 'bg-teal-100 text-teal-700 border-l-4 border-teal-600'
+                        ? 'bg-purple-100 text-purple-700 border-l-4 border-purple-600'
                         : 'text-gray-700 hover:translate-x-1'
                     }`}
                   >
@@ -204,10 +204,10 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                 onClick={() => toggleSection('quickLinks')}
                 className="flex items-center justify-between w-full text-left"
               >
-                <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-4">
+                <h3 className="text-sm font-semibold text-purple-600 uppercase tracking-wider mb-4">
                   Quick Links
                 </h3>
-                <span className={`transform transition-transform duration-200 ${
+                <span className={`transform transition-transform duration-200 text-purple-600 ${
                   expandedSection === 'quickLinks' ? 'rotate-180' : ''
                 }`}>
                   ▼
@@ -220,7 +220,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                   <button
                     key={item.path}
                     onClick={() => handleLinkClick(item.path, item.scroll)}
-                    className="flex items-center p-3 rounded-lg w-full text-left transition-all duration-200 hover:bg-gray-50 hover:text-teal-700 text-gray-600 hover:translate-x-1 group"
+                    className="flex items-center p-3 rounded-lg w-full text-left transition-all duration-200 hover:bg-purple-50 hover:text-purple-700 text-gray-600 hover:translate-x-1 group"
                   >
                     <span className="text-base mr-3 group-hover:scale-110 transition-transform duration-200">
                       {item.icon}
@@ -237,10 +237,10 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                 onClick={() => toggleSection('schoolInfo')}
                 className="flex items-center justify-between w-full text-left"
               >
-                <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-4">
+                <h3 className="text-sm font-semibold text-purple-600 uppercase tracking-wider mb-4">
                   School Info
                 </h3>
-                <span className={`transform transition-transform duration-200 ${
+                <span className={`transform transition-transform duration-200 text-purple-600 ${
                   expandedSection === 'schoolInfo' ? 'rotate-180' : ''
                 }`}>
                   ▼
@@ -249,11 +249,11 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
               <div className={`transition-all duration-300 overflow-hidden ${
                 expandedSection === 'schoolInfo' ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
               }`}>
-                <div className="bg-gradient-to-br from-teal-50 to-blue-50 rounded-lg p-4 space-y-3">
+                <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-lg p-4 space-y-3 border border-purple-100">
                   {schoolInfo.map((info, index) => (
                     <div key={index} className="flex justify-between items-center">
                       <span className="text-gray-600 font-medium">{info.label}:</span>
-                      <span className="text-teal-700 font-semibold">{info.value}</span>
+                      <span className="text-purple-700 font-semibold">{info.value}</span>
                     </div>
                   ))}
                 </div>
@@ -261,8 +261,8 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
             </div>
 
             {/* Contact Info */}
-            <div className="bg-gray-50 rounded-lg p-4">
-              <h3 className="text-sm font-semibold text-gray-700 mb-3">Contact Us</h3>
+            <div className="bg-purple-50 rounded-lg p-4 border border-purple-100">
+              <h3 className="text-sm font-semibold text-purple-700 mb-3">Contact Us</h3>
               <div className="space-y-2 text-sm">
                 <div className="flex items-center text-gray-600">
                   <span className="mr-2">📍</span>
@@ -281,16 +281,16 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
           </div>
 
           {/* Footer */}
-          <div className="p-6 border-t border-gray-200 bg-gray-50">
+          <div className="p-6 border-t border-purple-100 bg-gradient-to-r from-purple-50 to-pink-50">
             <div className="text-center">
               <Link
                 to="/admission"
                 onClick={() => handleLinkClick('/admission')}
-                className="w-full bg-teal-600 text-white py-3 px-4 rounded-lg font-semibold hover:bg-teal-700 transition-colors duration-300 inline-block transform hover:scale-105"
+                className="w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white py-3 px-4 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300 inline-block transform hover:scale-105 shadow-lg"
               >
                 Apply Now
               </Link>
-              <p className="text-xs text-gray-500 mt-3">
+              <p className="text-xs text-purple-600 mt-3">
                 © 2024 Kids School. All rights reserved.
               </p>
             </div>

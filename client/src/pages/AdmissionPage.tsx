@@ -40,18 +40,18 @@ const AdmissionPage: React.FC = () => {
 
   if (isSubmitted) {
     return (
-      <div className="min-h-screen bg-gray-50 flex items-center justify-center py-12 px-4">
-        <div className="bg-white rounded-2xl p-12 shadow-xl text-center max-w-md w-full border border-gray-200">
-          <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
-            <svg className="w-10 h-10 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <div className="min-h-screen bg-gradient-to-br from-purple-600 via-purple-700 to-pink-600 flex items-center justify-center py-12 px-4">
+        <div className="bg-white/95 backdrop-blur-sm rounded-2xl p-12 shadow-xl text-center max-w-md w-full border-2 border-white/50">
+          <div className="w-20 h-20 bg-yellow-400 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
+            <svg className="w-10 h-10 text-purple-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
             </svg>
           </div>
-          <h2 className="text-3xl font-bold text-gray-800 mb-4">Application Submitted!</h2>
-          <p className="text-lg text-gray-600 mb-6">
+          <h2 className="text-3xl font-bold text-purple-800 mb-4">Application Submitted!</h2>
+          <p className="text-lg text-purple-700 mb-6">
             Thank you for your application. We'll review it and contact you soon.
           </p>
-          <p className="text-gray-500">
+          <p className="text-purple-600">
             You'll receive a confirmation email shortly.
           </p>
         </div>
@@ -60,25 +60,28 @@ const AdmissionPage: React.FC = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50 py-12 px-4">
+    <div className="min-h-screen bg-gradient-to-br from-purple-600 via-purple-700 to-pink-600 py-12 px-4">
       <div className="max-w-4xl mx-auto">
         {/* Header */}
         <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-gray-800 mb-4">School Admission Form</h1>
-          <p className="text-xl text-gray-600">Please fill out all the required information below</p>
+          <div className="inline-flex items-center px-4 py-2 bg-yellow-400 text-purple-800 rounded-full text-sm font-bold mb-6">
+            🎓 School Admission
+          </div>
+          <h1 className="text-4xl font-bold text-white mb-4">School Admission Form</h1>
+          <p className="text-xl text-white/90">Please fill out all the required information below</p>
         </div>
 
         {/* Form */}
-        <form onSubmit={handleSubmit} className="bg-white rounded-2xl shadow-xl border border-gray-200">
+        <form onSubmit={handleSubmit} className="bg-white/95 backdrop-blur-sm rounded-2xl shadow-xl border-2 border-white/50">
           <div className="p-8">
             <div className="grid md:grid-cols-2 gap-6">
               {/* Student Name */}
               <div className="md:col-span-2">
-                <label className="block text-gray-700 text-sm font-semibold mb-2" htmlFor="studentName">
+                <label className="block text-purple-700 text-sm font-semibold mb-2" htmlFor="studentName">
                   Student Name *
                 </label>
                 <input
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-all duration-300"
+                  className="w-full px-4 py-3 border border-purple-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-300"
                   id="studentName"
                   name="studentName"
                   type="text"
@@ -91,11 +94,11 @@ const AdmissionPage: React.FC = () => {
 
               {/* Student Age */}
               <div>
-                <label className="block text-gray-700 text-sm font-semibold mb-2" htmlFor="studentAge">
+                <label className="block text-purple-700 text-sm font-semibold mb-2" htmlFor="studentAge">
                   Student Age *
                 </label>
                 <input
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-all duration-300"
+                  className="w-full px-4 py-3 border border-purple-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-300"
                   id="studentAge"
                   name="studentAge"
                   type="number"
@@ -110,11 +113,11 @@ const AdmissionPage: React.FC = () => {
 
               {/* Grade */}
               <div>
-                <label className="block text-gray-700 text-sm font-semibold mb-2" htmlFor="grade">
+                <label className="block text-purple-700 text-sm font-semibold mb-2" htmlFor="grade">
                   Grade Level *
                 </label>
                 <select
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-all duration-300"
+                  className="w-full px-4 py-3 border border-purple-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-300"
                   id="grade"
                   name="grade"
                   value={formData.grade}
@@ -134,11 +137,11 @@ const AdmissionPage: React.FC = () => {
 
               {/* Parent Name */}
               <div>
-                <label className="block text-gray-700 text-sm font-semibold mb-2" htmlFor="parentName">
+                <label className="block text-purple-700 text-sm font-semibold mb-2" htmlFor="parentName">
                   Parent/Guardian Name *
                 </label>
                 <input
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-all duration-300"
+                  className="w-full px-4 py-3 border border-purple-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-300"
                   id="parentName"
                   name="parentName"
                   type="text"
@@ -151,11 +154,11 @@ const AdmissionPage: React.FC = () => {
 
               {/* Contact Number */}
               <div>
-                <label className="block text-gray-700 text-sm font-semibold mb-2" htmlFor="contactNumber">
+                <label className="block text-purple-700 text-sm font-semibold mb-2" htmlFor="contactNumber">
                   Phone Number *
                 </label>
                 <input
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-all duration-300"
+                  className="w-full px-4 py-3 border border-purple-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-300"
                   id="contactNumber"
                   name="contactNumber"
                   type="tel"
@@ -168,11 +171,11 @@ const AdmissionPage: React.FC = () => {
 
               {/* Email */}
               <div className="md:col-span-2">
-                <label className="block text-gray-700 text-sm font-semibold mb-2" htmlFor="email">
+                <label className="block text-purple-700 text-sm font-semibold mb-2" htmlFor="email">
                   Email Address *
                 </label>
                 <input
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-all duration-300"
+                  className="w-full px-4 py-3 border border-purple-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-300"
                   id="email"
                   name="email"
                   type="email"
@@ -185,11 +188,11 @@ const AdmissionPage: React.FC = () => {
 
               {/* Address */}
               <div className="md:col-span-2">
-                <label className="block text-gray-700 text-sm font-semibold mb-2" htmlFor="address">
+                <label className="block text-purple-700 text-sm font-semibold mb-2" htmlFor="address">
                   Home Address *
                 </label>
                 <textarea
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-all duration-300 h-24 resize-none"
+                  className="w-full px-4 py-3 border border-purple-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-300 h-24 resize-none"
                   id="address"
                   name="address"
                   placeholder="Enter your complete address"
@@ -200,17 +203,17 @@ const AdmissionPage: React.FC = () => {
               </div>
             </div>
 
-            <div className="mt-8 pt-6 border-t border-gray-200">
+            <div className="mt-8 pt-6 border-t border-purple-200">
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button
                   type="submit"
-                  className="bg-teal-600 text-white font-semibold py-3 px-8 rounded-lg hover:bg-teal-700 transition-colors duration-300 shadow-lg"
+                  className="bg-gradient-to-r from-purple-600 to-pink-600 text-white font-bold py-3 px-8 rounded-full hover:from-purple-700 hover:to-pink-700 transition-all duration-300 shadow-lg transform hover:scale-105"
                 >
                   Submit Application
                 </button>
                 <button
                   type="button"
-                  className="bg-gray-200 text-gray-700 font-semibold py-3 px-8 rounded-lg hover:bg-gray-300 transition-colors duration-300"
+                  className="bg-purple-100 text-purple-700 font-bold py-3 px-8 rounded-full hover:bg-purple-200 transition-all duration-300 border-2 border-purple-200"
                   onClick={() => setFormData({
                     studentName: '',
                     studentAge: '',
@@ -230,13 +233,15 @@ const AdmissionPage: React.FC = () => {
 
         {/* Additional Info */}
         <div className="mt-12 text-center">
-          <p className="text-gray-600 mb-4">
-            Questions about the admission process? 
-          </p>
-          <p className="text-gray-700">
-            Contact us at <span className="font-semibold text-teal-600">(555) 123-KIDS</span> or 
-            <span className="font-semibold text-teal-600"> info@kidsschool.edu</span>
-          </p>
+          <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-8 border-2 border-white/50 shadow-xl">
+            <p className="text-purple-700 mb-4 text-lg">
+              Questions about the admission process? 
+            </p>
+            <p className="text-purple-800">
+              Contact us at <span className="font-bold text-yellow-500">(555) 123-KIDS</span> or 
+              <span className="font-bold text-yellow-500"> info@kidsschool.edu</span>
+            </p>
+          </div>
         </div>
       </div>
     </div>

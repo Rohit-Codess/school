@@ -90,25 +90,25 @@ const AdminPage: React.FC = () => {
 
   if (!isLoggedIn) {
     return (
-      <div className="min-h-screen bg-gray-50 flex items-center justify-center py-12 px-4">
-        <div className="bg-white rounded-2xl p-12 shadow-xl border border-gray-200 max-w-md w-full">
+      <div className="min-h-screen bg-gradient-to-br from-purple-600 via-purple-700 to-pink-600 flex items-center justify-center py-12 px-4">
+        <div className="bg-white/95 backdrop-blur-sm rounded-2xl p-12 shadow-xl border-2 border-white/50 max-w-md w-full">
           <div className="text-center mb-8">
-            <div className="w-16 h-16 bg-teal-100 rounded-full flex items-center justify-center mx-auto mb-4">
-              <svg className="w-8 h-8 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="w-16 h-16 bg-yellow-400 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+              <svg className="w-8 h-8 text-purple-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
               </svg>
             </div>
-            <h2 className="text-3xl font-bold text-gray-800">Admin Login</h2>
-            <p className="text-gray-600 mt-2">Access the admin panel</p>
+            <h2 className="text-3xl font-bold text-purple-800">Admin Login</h2>
+            <p className="text-purple-700 mt-2">Access the admin panel</p>
           </div>
           
           <form onSubmit={handleLogin}>
             <div className="mb-6">
-              <label className="block text-gray-700 text-sm font-semibold mb-2" htmlFor="username">
+              <label className="block text-purple-700 text-sm font-semibold mb-2" htmlFor="username">
                 Username
               </label>
               <input
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-all duration-300"
+                className="w-full px-4 py-3 border border-purple-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-300"
                 id="username"
                 type="text"
                 placeholder="Enter username"
@@ -119,11 +119,11 @@ const AdminPage: React.FC = () => {
             </div>
             
             <div className="mb-8">
-              <label className="block text-gray-700 text-sm font-semibold mb-2" htmlFor="password">
+              <label className="block text-purple-700 text-sm font-semibold mb-2" htmlFor="password">
                 Password
               </label>
               <input
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-all duration-300"
+                className="w-full px-4 py-3 border border-purple-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-300"
                 id="password"
                 type="password"
                 placeholder="Enter password"
@@ -135,13 +135,13 @@ const AdminPage: React.FC = () => {
             
             <button
               type="submit"
-              className="w-full bg-teal-600 text-white font-semibold py-3 px-6 rounded-lg hover:bg-teal-700 transition-colors duration-300 shadow-lg"
+              className="w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white font-bold py-3 px-6 rounded-full hover:from-purple-700 hover:to-pink-700 transition-all duration-300 shadow-lg transform hover:scale-105"
             >
               Login
             </button>
           </form>
           
-          <div className="mt-4 text-sm text-gray-500 text-center">
+          <div className="mt-4 text-sm text-purple-600 text-center">
             Demo credentials: admin / admin123
           </div>
         </div>
@@ -150,18 +150,18 @@ const AdminPage: React.FC = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gradient-to-br from-purple-600 via-purple-700 to-pink-600">
       <div className="container mx-auto px-6 py-8">
         {/* Header */}
-        <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-200 mb-8">
+        <div className="bg-white/95 backdrop-blur-sm rounded-2xl p-8 shadow-lg border-2 border-white/50 mb-8">
           <div className="flex justify-between items-center">
             <div>
-              <h1 className="text-4xl font-bold text-gray-800 mb-2">Admin Dashboard</h1>
-              <p className="text-gray-600">Manage student applications and admissions</p>
+              <h1 className="text-4xl font-bold text-purple-800 mb-2">Admin Dashboard</h1>
+              <p className="text-purple-700">Manage student applications and admissions</p>
             </div>
             <button
               onClick={() => setIsLoggedIn(false)}
-              className="bg-red-600 text-white px-6 py-2 rounded-lg hover:bg-red-700 transition-colors duration-300"
+              className="bg-gradient-to-r from-red-500 to-red-600 text-white px-6 py-2 rounded-full hover:from-red-600 hover:to-red-700 transition-all duration-300 font-bold shadow-lg"
             >
               Logout
             </button>
@@ -170,7 +170,7 @@ const AdminPage: React.FC = () => {
 
         {/* Statistics */}
         <div className="grid md:grid-cols-3 gap-6 mb-8">
-          <div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-200">
+          <div className="bg-white/95 backdrop-blur-sm rounded-2xl p-6 shadow-lg border-2 border-white/50">
             <div className="flex items-center">
               <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
                 <svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -178,13 +178,13 @@ const AdminPage: React.FC = () => {
                 </svg>
               </div>
               <div className="ml-4">
-                <h3 className="text-2xl font-bold text-gray-800">{students.length}</h3>
-                <p className="text-gray-600">Total Applications</p>
+                <h3 className="text-2xl font-bold text-purple-800">{students.length}</h3>
+                <p className="text-purple-700">Total Applications</p>
               </div>
             </div>
           </div>
           
-          <div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-200">
+          <div className="bg-white/95 backdrop-blur-sm rounded-2xl p-6 shadow-lg border-2 border-white/50">
             <div className="flex items-center">
               <div className="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center">
                 <svg className="w-6 h-6 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -192,15 +192,15 @@ const AdminPage: React.FC = () => {
                 </svg>
               </div>
               <div className="ml-4">
-                <h3 className="text-2xl font-bold text-gray-800">
+                <h3 className="text-2xl font-bold text-purple-800">
                   {students.filter(s => s.status === 'pending').length}
                 </h3>
-                <p className="text-gray-600">Pending Review</p>
+                <p className="text-purple-700">Pending Review</p>
               </div>
             </div>
           </div>
           
-          <div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-200">
+          <div className="bg-white/95 backdrop-blur-sm rounded-2xl p-6 shadow-lg border-2 border-white/50">
             <div className="flex items-center">
               <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center">
                 <svg className="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -208,70 +208,70 @@ const AdminPage: React.FC = () => {
                 </svg>
               </div>
               <div className="ml-4">
-                <h3 className="text-2xl font-bold text-gray-800">
+                <h3 className="text-2xl font-bold text-purple-800">
                   {students.filter(s => s.status === 'approved').length}
                 </h3>
-                <p className="text-gray-600">Approved</p>
+                <p className="text-purple-700">Approved</p>
               </div>
             </div>
           </div>
         </div>
 
         {/* Student Applications Table */}
-        <div className="bg-white rounded-2xl shadow-lg border border-gray-200">
+        <div className="bg-white/95 backdrop-blur-sm rounded-2xl shadow-lg border-2 border-white/50">
           <div className="p-8">
-            <h2 className="text-2xl font-bold text-gray-800 mb-6">Student Applications</h2>
+            <h2 className="text-2xl font-bold text-purple-800 mb-6">Student Applications</h2>
             
             <div className="overflow-x-auto">
               <table className="w-full">
                 <thead>
-                  <tr className="bg-gray-50 border-b">
-                    <th className="text-left py-4 px-6 font-semibold text-gray-700">Student</th>
-                    <th className="text-left py-4 px-6 font-semibold text-gray-700">Parent</th>
-                    <th className="text-left py-4 px-6 font-semibold text-gray-700">Grade</th>
-                    <th className="text-left py-4 px-6 font-semibold text-gray-700">Contact</th>
-                    <th className="text-left py-4 px-6 font-semibold text-gray-700">Status</th>
-                    <th className="text-left py-4 px-6 font-semibold text-gray-700">Date</th>
-                    <th className="text-left py-4 px-6 font-semibold text-gray-700">Actions</th>
+                  <tr className="bg-purple-50 border-b border-purple-200">
+                    <th className="text-left py-4 px-6 font-semibold text-purple-700">Student</th>
+                    <th className="text-left py-4 px-6 font-semibold text-purple-700">Parent</th>
+                    <th className="text-left py-4 px-6 font-semibold text-purple-700">Grade</th>
+                    <th className="text-left py-4 px-6 font-semibold text-purple-700">Contact</th>
+                    <th className="text-left py-4 px-6 font-semibold text-purple-700">Status</th>
+                    <th className="text-left py-4 px-6 font-semibold text-purple-700">Date</th>
+                    <th className="text-left py-4 px-6 font-semibold text-purple-700">Actions</th>
                   </tr>
                 </thead>
                 <tbody>
                   {students.map((student) => (
-                    <tr key={student.id} className="border-b hover:bg-gray-50 transition-colors duration-200">
+                    <tr key={student.id} className="border-b border-purple-100 hover:bg-purple-50/50 transition-colors duration-200">
                       <td className="py-4 px-6">
                         <div>
-                          <div className="font-semibold text-gray-800">{student.studentName}</div>
-                          <div className="text-sm text-gray-500">Age: {student.studentAge}</div>
+                          <div className="font-semibold text-purple-800">{student.studentName}</div>
+                          <div className="text-sm text-purple-600">Age: {student.studentAge}</div>
                         </div>
                       </td>
                       <td className="py-4 px-6">
                         <div>
-                          <div className="font-semibold text-gray-800">{student.parentName}</div>
-                          <div className="text-sm text-gray-500">{student.email}</div>
+                          <div className="font-semibold text-purple-800">{student.parentName}</div>
+                          <div className="text-sm text-purple-600">{student.email}</div>
                         </div>
                       </td>
                       <td className="py-4 px-6">
-                        <span className="bg-teal-100 text-teal-800 px-3 py-1 rounded-full text-sm font-medium">
+                        <span className="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium border border-purple-200">
                           {getGradeLabel(student.grade)}
                         </span>
                       </td>
                       <td className="py-4 px-6">
-                        <div className="text-sm text-gray-600">{student.contactNumber}</div>
+                        <div className="text-sm text-purple-700">{student.contactNumber}</div>
                       </td>
                       <td className="py-4 px-6">
                         <span className={`px-3 py-1 rounded-full text-sm font-medium border ${getStatusColor(student.status)}`}>
                           {student.status.charAt(0).toUpperCase() + student.status.slice(1)}
                         </span>
                       </td>
-                      <td className="py-4 px-6 text-sm text-gray-600">
+                      <td className="py-4 px-6 text-sm text-purple-700">
                         {student.submittedAt}
                       </td>
                       <td className="py-4 px-6">
                         <div className="flex space-x-2">
-                          <button className="bg-green-600 text-white px-3 py-1 rounded-lg text-sm hover:bg-green-700 transition-colors duration-200">
+                          <button className="bg-green-600 text-white px-3 py-1 rounded-lg text-sm hover:bg-green-700 transition-colors duration-200 font-medium">
                             Approve
                           </button>
-                          <button className="bg-red-600 text-white px-3 py-1 rounded-lg text-sm hover:bg-red-700 transition-colors duration-200">
+                          <button className="bg-red-600 text-white px-3 py-1 rounded-lg text-sm hover:bg-red-700 transition-colors duration-200 font-medium">
                             Reject
                           </button>
                         </div>
