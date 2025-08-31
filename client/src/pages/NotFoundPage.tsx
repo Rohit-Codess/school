@@ -19,7 +19,7 @@ const NotFoundPage: React.FC = () => {
         </p>
         <Link
           to="/"
-          className="inline-block bg-yellow-400 text-purple-800 px-8 py-3 rounded-full font-bold hover:bg-yellow-300 transition-all duration-300 shadow-lg transform hover:scale-105"
+          className="inline-block bg-yellow-400 text-purple-800 px-6 sm:px-8 py-3 sm:py-4 rounded-full font-bold hover:bg-yellow-300 transition-all duration-300 shadow-lg transform hover:scale-105 active:scale-95 touch-manipulation min-h-[48px] text-sm sm:text-base"
         >
           Back to Home
         </Link>

@@ -135,7 +135,7 @@ const AdminPage: React.FC = () => {
             
             <button
               type="submit"
-              className="w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white font-bold py-3 px-6 rounded-full hover:from-purple-700 hover:to-pink-700 transition-all duration-300 shadow-lg transform hover:scale-105"
+              className="w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white font-bold py-4 px-6 rounded-full hover:from-purple-700 hover:to-pink-700 transition-all duration-300 shadow-lg transform hover:scale-105 active:scale-95 touch-manipulation min-h-[48px]"
             >
               Login
             </button>
@@ -161,7 +161,7 @@ const AdminPage: React.FC = () => {
             </div>
             <button
               onClick={() => setIsLoggedIn(false)}
-              className="bg-gradient-to-r from-red-500 to-red-600 text-white px-6 py-2 rounded-full hover:from-red-600 hover:to-red-700 transition-all duration-300 font-bold shadow-lg"
+              className="bg-gradient-to-r from-red-500 to-red-600 text-white px-4 sm:px-6 py-3 rounded-full hover:from-red-600 hover:to-red-700 transition-all duration-300 font-bold shadow-lg transform hover:scale-105 active:scale-95 touch-manipulation min-h-[48px]"
             >
               Logout
             </button>
@@ -267,11 +267,11 @@ const AdminPage: React.FC = () => {
                         {student.submittedAt}
                       </td>
                       <td className="py-4 px-6">
-                        <div className="flex space-x-2">
-                          <button className="bg-green-600 text-white px-3 py-1 rounded-lg text-sm hover:bg-green-700 transition-colors duration-200 font-medium">
+                        <div className="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-2">
+                          <button className="bg-green-600 text-white px-4 py-2 rounded-lg text-sm hover:bg-green-700 transition-colors duration-200 font-medium transform hover:scale-105 active:scale-95 touch-manipulation min-h-[44px]">
                             Approve
                           </button>
-                          <button className="bg-red-600 text-white px-3 py-1 rounded-lg text-sm hover:bg-red-700 transition-colors duration-200 font-medium">
+                          <button className="bg-red-600 text-white px-4 py-2 rounded-lg text-sm hover:bg-red-700 transition-colors duration-200 font-medium transform hover:scale-105 active:scale-95 touch-manipulation min-h-[44px]">
                             Reject
                           </button>
                         </div>

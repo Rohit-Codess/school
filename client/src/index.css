@@ -15,9 +15,33 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Custom scrollbar */
+/* Mobile-First Touch Optimization */
+@media (hover: none) and (pointer: coarse) {
+  /* Touch-friendly button states */
+  button:hover {
+    transform: none !important;
+  }
+  
+  a:hover {
+    transform: none !important;
+  }
+  
+  /* Better tap targets for mobile */
+  button, a {
+    min-height: 44px;
+    min-width: 44px;
+  }
+}
+
+/* Mobile-Optimized Scrollbar */
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 4px;
+}
+
+@media (min-width: 768px) {
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
 }
 
 ::-webkit-scrollbar-track {
@@ -26,19 +50,19 @@ html {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(45deg, #0d9488 0%, #14b8a6 100%);
+  background: linear-gradient(45deg, #6C2EB5 0%, #FFEB3B 100%);
   border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(45deg, #0f766e 0%, #0d9488 100%);
+  background: linear-gradient(45deg, #5B2A9E 0%, #FFD700 100%);
 }
 
-/* Simple fade-in animation */
-@keyframes fadeIn {
+/* Mobile-First Animations */
+@keyframes fadeInUp {
   from {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(30px);
   }
   to {
     opacity: 1;
@@ -46,35 +70,179 @@ html {
   }
 }
 
-.animate-fade-in {
-  animation: fadeIn 0.6s ease-out;
-}
-
-/* Slow spin animation for moon orbital motion */
-@keyframes spin-slow {
+@keyframes fadeInScale {
   from {
-    transform: rotate(0deg);
+    opacity: 0;
+    transform: scale(0.95);
   }
   to {
-    transform: rotate(360deg);
+    opacity: 1;
+    transform: scale(1);
   }
 }
 
-.animate-spin-slow {
-  animation: spin-slow 20s linear infinite;
-}
-
-/* Pause animation on hover */
-.animate-spin-slow:hover {
-  animation-play-state: paused;
-}
-
-/* Counter rotation for moons to keep them upright */
-@keyframes counter-rotate {
+@keyframes slideInLeft {
   from {
-    transform: translate(-50%, -50%) rotate(0deg);
+    opacity: 0;
+    transform: translateX(-30px);
   }
   to {
-    transform: translate(-50%, -50%) rotate(-360deg);
+    opacity: 1;
+    transform: translateX(0);
   }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes bounce {
+  0%, 20%, 53%, 80%, 100% {
+    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    transform: translate3d(0,0,0);
+  }
+  40%, 43% {
+    animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+    transform: translate3d(0, -15px, 0);
+  }
+  70% {
+    animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+    transform: translate3d(0, -7px, 0);
+  }
+  90% {
+    transform: translate3d(0,-2px,0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.animate-fade-in-scale {
+  animation: fadeInScale 0.6s ease-out;
+}
+
+.animate-slide-in-left {
+  animation: slideInLeft 0.6s ease-out;
+}
+
+.animate-slide-in-right {
+  animation: slideInRight 0.6s ease-out;
+}
+
+.animate-bounce-gentle {
+  animation: bounce 2s infinite;
+}
+
+/* Mobile-Specific Utilities */
+.touch-manipulation {
+  touch-action: manipulation;
+}
+
+.prevent-zoom {
+  touch-action: pan-x pan-y;
+}
+
+/* Reduced motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Mobile Focus States */
+.focus-visible {
+  outline: 2px solid #FFEB3B;
+  outline-offset: 2px;
+}
+
+/* Mobile-Optimized Card Shadows */
+.mobile-card-shadow {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+@media (min-width: 768px) {
+  .mobile-card-shadow {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  }
+}
+
+/* Loading Spinner for Mobile */
+.mobile-spinner {
+  border: 2px solid #f3f3f3;
+  border-top: 2px solid #6C2EB5;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Mobile-First Button Styles */
+.mobile-btn-primary {
+  background: linear-gradient(135deg, #6C2EB5 0%, #8B5CF6 100%);
+  color: white;
+  padding: 12px 24px;
+  border-radius: 9999px;
+  font-weight: 700;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+  touch-action: manipulation;
+  user-select: none;
+}
+
+@media (min-width: 640px) {
+  .mobile-btn-primary {
+    padding: 16px 32px;
+    font-size: 16px;
+  }
+}
+
+.mobile-btn-primary:active {
+  transform: scale(0.95);
+}
+
+.mobile-btn-secondary {
+  background: transparent;
+  color: #6C2EB5;
+  border: 2px solid #6C2EB5;
+  padding: 12px 24px;
+  border-radius: 9999px;
+  font-weight: 700;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  touch-action: manipulation;
+  user-select: none;
+}
+
+@media (min-width: 640px) {
+  .mobile-btn-secondary {
+    padding: 16px 32px;
+    font-size: 16px;
+  }
+}
+
+.mobile-btn-secondary:active {
+  transform: scale(0.95);
+  background: #6C2EB5;
+  color: white;
 }
